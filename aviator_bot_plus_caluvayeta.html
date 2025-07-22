@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviator Bot Plus Caluvayeta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff004f;
+    }
+    h1 {
+      text-align: center;
+      color: #ff004f;
+    }
+    #sinais {
+      margin-top: 20px;
+    }
+    .sinal {
+      background: #292929;
+      border-left: 5px solid #ff004f;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .botao, .botao2 {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #ff004f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .botao:hover, .botao2:hover {
+      background-color: #e10045;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Aviator Bot Plus Caluvayeta Caluvayeta</h1>
+
+    <button class="botao" onclick="iniciarSinais()">Iniciar Sinais</button>
+    <button class="botao2" onclick="abrirElephant()">Abrir Elephant Bet 🐘</button>
+
+    <div id="sinais"></div>
+  </div>
+
+  <script>
+    const sinais = [
+      "Entrar em 1.65",
+      "Sair em 2.00",
+      "Esperar rodada",
+      "Entrar em 1.45",
+      "Cuidado! Vento lateral!",
+      "Entrar em 1.75 e sair em 2.10"
+    ];
+
+    function iniciarSinais() {
+      const container = document.getElementById("sinais");
+      container.innerHTML = "";
+      sinais.forEach((sinal, i) => {
+        setTimeout(() => {
+          const div = document.createElement("div");
+          div.className = "sinal";
+          div.innerText = `🚨 ${sinal}`;
+          container.appendChild(div);
+        }, i * 3000);
+      });
+    }
+
+    function abrirElephant() {
+      window.open("https://elephantbet.ao", "_blank");
+    }
+  </script>
+</body>
+</html>
